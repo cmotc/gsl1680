@@ -9,7 +9,7 @@ CPPFLAGS =
 CFLAGS   = -Wextra -Wall -Os
 LDFLAGS  = -s -static
 
-ARCH=arm
+ARCH=armhf
 CROSS_COMPILE=arm-linux-gnueabihf-
 PREFIX=/bin
 
