@@ -11,6 +11,12 @@
 # Description: Starts the GSLx680 user-space driver for capacitive touch screens
 ### END INIT INFO
 
+if [ -f /etc/gslx68x.cfg ]; then
+        source /etc/gslx68x.cfg
+else
+        FIRMWARE="/lib/firmware/silead.fw"
+fi
+
 function do_stop {
     killall gslx680
 }

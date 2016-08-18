@@ -2,7 +2,8 @@
 # paths
 PREFIX = /
 MANPREFIX = $(PREFIX)/share/man
-ETCPREFIX = /etc/init.d
+ETCPREFIX = /etc
+INITPREFIX = /etc/init.d
 
 #CC = cc
 CPPFLAGS =
@@ -22,11 +23,12 @@ driver.o: driver.c driver.h
 install:
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
 	install gslx680 $(DESTDIR)$(PREFIX)/
-	mkdir -p $(DESTDIR)$(ETCPREFIX)
-	install igslx680.init /$(DESTDIR)$(ETCPREFIX)/igslx680
+	mkdir -p $(DESTDIR)$(INITPREFIX)
+	install igslx680.init /$(DESTDIR)$(INITPREFIX)/igslx680
+	install gslx68x.cfg /$(DESTDIR)$(INITPREFIX)/gslx68x.cfg
 	#install gslx680.service /etc/systemd/system/gslx680.service
 	rm -f /etc/init.d/gslx680
-	update-rc.d igslx680 defaults
+	#update-rc.d igslx680 defaults
 
 clean:
 	rm -rf gslx680 *.o
