@@ -26,7 +26,7 @@ install:
 	install igslx680.init /$(DESTDIR)$(ETCPREFIX)/igslx680
 	#install gslx680.service /etc/systemd/system/gslx680.service
 	rm -f /etc/init.d/gslx680
-	#update-rc.d igslx680 defaults
+	update-rc.d igslx680 defaults
 
 clean:
 	rm -rf gslx680 *.o

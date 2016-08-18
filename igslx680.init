@@ -16,7 +16,7 @@ function do_stop {
 }
 
 function do_start {
-    /bin/gslx680 -res 1024x600 -new_scroll /dev/i2c-1 /lib/firmware/GSL2681_D786_FW.fw &
+    /bin/gslx680 -res 1024x600 -new_scroll /dev/i2c-1 /lib/firmware/silead.fw &
     ##/etc/gslx680/firmware.cfg &
 }
 case "$1" in
