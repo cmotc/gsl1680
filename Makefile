@@ -25,7 +25,7 @@ install:
 	install gslx680 $(DESTDIR)$(PREFIX)/
 	mkdir -p $(DESTDIR)$(INITPREFIX)
 	install igslx680.init /$(DESTDIR)$(INITPREFIX)/igslx680
-	install gslx68x.cfg /$(DESTDIR)$(INITPREFIX)/gslx68x.cfg
+	install gslx68x.cfg /$(DESTDIR)$(ETCPREFIX)/gslx68x.cfg
 	#install gslx680.service /etc/systemd/system/gslx680.service
 	rm -f /etc/init.d/gslx680
 	#update-rc.d igslx680 defaults
