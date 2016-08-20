@@ -22,7 +22,7 @@ Description: gsl1680 is a user-space driver for Silead gslx68x touch screen
  devices. It requires device firmware to function.
  .
  "
-RULES_FILE="#!/usr/bin/make -f
+RULES_FILE='#!/usr/bin/make -f
 # See debhelper(7) (uncomment to enable)
 # output every command that modifies files on the build system.
 #export DH_VERBOSE = 1
@@ -39,7 +39,7 @@ RULES_FILE="#!/usr/bin/make -f
 
 
 %:
-	dh \$@
+	dh $@
 
 
 # dh_make generated override targets
@@ -49,7 +49,7 @@ RULES_FILE="#!/usr/bin/make -f
 
 override_dh_strip:
         dh_strip -Xgsl
-"
+'
 DEBFOLDERNAME="../$DEBFOLDER-$DEBVERSION"
 
 cd $DEBFOLDER
