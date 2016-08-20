@@ -16,7 +16,7 @@ Vcs-Git: git@github.com:rastersoft/gsl1680
 Vcs-Browser: https://github.com/rastersoft/gsl1680
 
 Package: gsl1680
-Architecture: all
+Architecture: any
 Depends: \${misc:Depends}
 Description: gsl1680 is a user-space driver for Silead gslx68x touch screen
  devices. It requires device firmware to function.
