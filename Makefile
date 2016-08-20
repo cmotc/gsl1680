@@ -15,10 +15,10 @@ CROSS_COMPILE=arm-linux-gnueabihf-
 PREFIX=/bin
 
 gslx680: driver.o
-	gcc -o gslx680 driver.o -lm
+	$(CROSS_COMPILE)gcc -o gslx680 driver.o -lm
 
 driver.o: driver.c driver.h
-	gcc -c -o driver.o driver.c
+	$(CROSS_COMPILE)gcc -c -o driver.o driver.c
 
 install:
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
